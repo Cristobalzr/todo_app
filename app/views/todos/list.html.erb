@@ -3,7 +3,6 @@
   <div class="col-6">
     <%= @todos.each do |t| %>
       <% if t.completed == true %>
-        <%= t.description %>
         <%= t.completed %>
       <% end %>
     <% end %>
@@ -11,7 +10,6 @@
   <div class="col-6">
     <%= @todos.each do |t| %>
       <% if t.completed == false %>
-        <%= t.description %>
         <%= t.completed %>
       <% end %>
     <% end %>
