@@ -1,16 +1,26 @@
 <%= render 'navbar' %>
 <div class="row pt-5">
   <div class="col-6">
-    <%= @todos.each do |t| %>
+    <% @todos.each do |t| %>
       <% if t.completed == true %>
-        <%= t.completed %>
+        <div class="">
+          <h1><%= t.description %></h1>
+          <p><%= t.completed %></p>
+        </div>
+
+
       <% end %>
     <% end %>
   </div>
   <div class="col-6">
-    <%= @todos.each do |t| %>
+    <% @todos.each do |t| %>
       <% if t.completed == false %>
-        <%= t.completed %>
+        <div class="">
+          <h1><%= t.description %></h1>
+          <p><%= t.completed %></p>
+        </div>
+
+
       <% end %>
     <% end %>
   </div>

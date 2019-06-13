@@ -1,12 +1,13 @@
 <%= render 'navbar' %>
 <% @todos.each do |todo| %>
-  <div class="well pt-5">
+<div class="row">
+  <div class="card col-3 well pt-5">
     <h1><%= link_to todo.description, todo %></h1>
     <h2><%= todo.completed %></h2>
     <p><%= link_to "Borrar", todo, method: :delete %></p>
-    <p><%= link_to "Completar", complete_path(todo) %></p>
+    <% if todo.completed == false %>
+      <p><%= link_to "Completar", complete_path(todo) %></p>
+    <% end %>
   </div>
-<% end %>
-<div class="">
-
 </div>
+<% end %>
