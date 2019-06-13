@@ -1,3 +1,6 @@
-<h1><%= @todo.description %></h1>
-<p><%= @todo.completed %></p>
-<p><%= @todo.created_at %></p>
+<%= render 'navbar' %>
+<div class="pt-5">
+  <h1><%= @todo.description %></h1>
+  <p><%= @todo.completed %></p>
+  <p><%= @todo.created_at %></p>
+</div>

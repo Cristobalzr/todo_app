@@ -1,15 +1,12 @@
 <%= render 'navbar' %>
 <% @todos.each do |todo| %>
-  <div class="well">
+  <div class="well pt-5">
     <h1><%= link_to todo.description, todo %></h1>
     <h2><%= todo.completed %></h2>
     <p><%= link_to "Borrar", todo, method: :delete %></p>
     <p><%= link_to "Completar", complete_path(todo) %></p>
   </div>
 <% end %>
-<div class="">
-  <%= link_to "Crear ToDo", todos_new_path %>
-</div>
 <div class="">
 
 </div>
