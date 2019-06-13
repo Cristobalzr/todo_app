@@ -15,11 +15,9 @@ class TodosController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
-
   end
 
   def update
@@ -33,6 +31,8 @@ class TodosController < ApplicationController
   end
 
   def complete
+    @todo.completed = true
+    @todo.save
     redirect_to todos_path
   end
 
