@@ -1,7 +1,7 @@
 <%= render 'navbar' %>
 <% @todos.each do |todo| %>
 <div class="row">
-  <div class="card col-3 well pt-5">
+  <div class="card col-12 well pt-5">
     <h1><%= link_to todo.description, todo %></h1>
     <h2><%= todo.completed %></h2>
     <p><%= link_to "Borrar", todo, method: :delete %></p>
